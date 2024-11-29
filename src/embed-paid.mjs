@@ -141,6 +141,49 @@ class AIApp
   			return console.log(`Could not invoke ${modelId}. Error: ${error}`);
   		}
 	}
+
+
+	async generateTextEmbeddingsWithBedrockTitanTextv2(textsToEmbed, credentials, outputEmbeddingLength)
+	{
+		// Supported use cases – Text search, recommendation, and personalization.
+		console.log("");
+    		console.log("-- Generating Text Embeddings with AWS Bedrock's titan-embed-text-v2:0  --"); 
+    		const modelId = "amazon.titan-embed-text-v2:0"; 
+		const modelName = "Titan Text Embeddings V2";  
+		const contentType = "application/json";
+    		const client = new BedrockRuntimeClient({credentials});
+    		let embeddings = [];
+    		const texts = textsToEmbed;
+    		const textsLen  = texts.length;
+    		console.log({textsLen:textsLen})
+
+		try 
+		{
+		    for(let index = 0; index < textsLen; index++)
+		    {
+		        let text = texts[index];
+		        const inputs = {
+				modelId: modelId,
+				contentType: contentType,
+			    	body:  JSON.stringify({ "inputText": text, "dimensions": outputEmbeddingLength })
+			};
+		        const command = new InvokeModelCommand(inputs);
+			const response = await client.send(command);
+			const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+			const embedding = responseBody.embedding;
+			const inputTextTokenCount = responseBody.inputTextTokenCount;
+			const output = { embeddingSize: embedding.length, textEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
+		        embeddings.push(output);
+		    }
+
+		    return embeddings;
+		} 
+		catch (error) 
+		{
+			return console.log(`Could not invoke ${modelId}. Error: ${error}`);
+		}
+	}
+
 	
 	async testAIApp()
 	{
@@ -150,13 +193,14 @@ class AIApp
 	    const listAvailableFoundationalModel = false;
 	    const generateImageEmbeddings = true;
 	    const generateTextEmbeddings = false;
+	    const generateTextEmbeddingsTitanTextv2 = false;
 		
 	    const credentialJsonFilePath = `${cuwd}/credentials.json`;
       	    const credentials =  JSON.parse(readFileSync(credentialJsonFilePath)).awsCredentials;
 
 	    // A. define inputs
 
-	    // 1 .embed images
+	    // 1. embed images
 	    const imageFilesToEmbed = [
 		`${cuwd}/images/nodejs-logo.png`,
 		`${cuwd}/images/python-logo.png`,
@@ -166,7 +210,7 @@ class AIApp
 	    // default ouput embedding length  = 1024;
 	    // can customize to a lower value e.g 256 or 384 but smaller values are less detailed but can improve the response time
 
-	    // 2. embed texts
+	    // 2a. & 2b. embed texts
 	    const textsToEmbed1 = ["The project is going as planned."];
 	    const textsToEmbed = [
   		"What is your name.",
@@ -188,10 +232,17 @@ class AIApp
 	    	await aiapp.prettyPrint( { "imageEmbeddingsBedrock" : imageEmbeddingsBedrock} );
 	    }
 
-	    // 2. text embedding with aws bedrock's amazon.titan-embed-image-v1 model
+	    // 2a. text embedding with aws bedrock's amazon.titan-embed-image-v1 model
 	    if(generateTextEmbeddings === true)
 	    {
 	    	const textEmbeddingsBedrock = await aiapp.generateTextEmbeddingsWithBedrock(textsToEmbed, credentials, textOutputEmbeddingLength);
+	    	await aiapp.prettyPrint( { "textEmbeddingsBedrock" : textEmbeddingsBedrock } );
+	    }
+
+	    // 2b. text embedding with aws bedrock's titan-embed-text-v2:0 model
+	    if(generateTextEmbeddingsTitanTextv2 === true)
+	    {
+	    	const textEmbeddingsBedrock = await aiapp.generateTextEmbeddingsWithBedrockTitanTextv2(textsToEmbed, credentials, textOutputEmbeddingLength);
 	    	await aiapp.prettyPrint( { "textEmbeddingsBedrock" : textEmbeddingsBedrock } );
 	    }
 
