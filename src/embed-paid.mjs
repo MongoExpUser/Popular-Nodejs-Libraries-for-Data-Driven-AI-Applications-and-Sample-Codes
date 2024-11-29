@@ -61,16 +61,16 @@ class AIApp
 
 	async generateImageEmbeddingsWithBedrock(imageFilesToEmbed, credentials, outputEmbeddingLength)
 	{
-		  // Supported use cases – Image search for all kinds of image identification 
-	    console.log("");
-    	console.log("-- Generating Image Embeddings with AWS Bedrock's titan-embed-image-v1  --");
-    	const modelId = "amazon.titan-embed-image-v1";
-		  const modelName = "Titan Multimodal Embeddings G1";  
-		  const contentType = "application/json";
-    	const client = new BedrockRuntimeClient({credentials});
-    	let embeddings = [];
-    	const files = imageFilesToEmbed;
-    	const fileLen  = files.length;
+		// Supported use cases – Image search for all kinds of image identification 
+	    	console.log("");
+    		console.log("-- Generating Image Embeddings with AWS Bedrock's titan-embed-image-v1  --");
+    		const modelId = "amazon.titan-embed-image-v1";
+		const modelName = "Titan Multimodal Embeddings G1";  
+		const contentType = "application/json";
+    		const client = new BedrockRuntimeClient({credentials});
+    		let embeddings = [];
+    		const files = imageFilesToEmbed;
+    		const fileLen  = files.length;
 
   		try 
   		{
@@ -80,16 +80,16 @@ class AIApp
   		        const imageData = readFileSync(file);
   				const base64Image = imageData.toString("base64");
   				const inputs = {
-  				 	modelId: modelId,
+  					modelId: modelId,
   				  	contentType: contentType,
-  			    	body:  JSON.stringify({ "inputImage": base64Image, "embeddingConfig": { "outputEmbeddingLength": outputEmbeddingLength } })
+  			    		body:  JSON.stringify({ "inputImage": base64Image, "embeddingConfig": { "outputEmbeddingLength": outputEmbeddingLength } })
   				};
   		        const command = new InvokeModelCommand(inputs);
-  			  	const response = await client.send(command);
-  			  	const responseBody = JSON.parse(new TextDecoder().decode(response.body));
-  			    const embedding = responseBody.embedding;
-  			    const inputTextTokenCount = responseBody.inputTextTokenCount;
-  			    const output = { embeddingSize: embedding.length,  imageEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
+  			const response = await client.send(command);
+  			const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+  			const embedding = responseBody.embedding;
+  			const inputTextTokenCount = responseBody.inputTextTokenCount;
+  			const output = { embeddingSize: embedding.length,  imageEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
   		        embeddings.push(output);
   		    } 
   		}
@@ -103,17 +103,17 @@ class AIApp
 
 	async generateTextEmbeddingsWithBedrock(textsToEmbed, credentials, outputEmbeddingLength)
 	{
-		  // Supported use cases – Text search, recommendation, and personalization.
-		  console.log("");
-    	console.log("-- Generating Text Embeddings with AWS Bedrock's titan-embed-image-v1  --");
-    	const modelId = "amazon.titan-embed-image-v1";
-		  const modelName = "Titan Multimodal Embeddings G1";  
-		  const contentType = "application/json";
-    	const client = new BedrockRuntimeClient({credentials});
-    	let embeddings = [];
-    	const texts = textsToEmbed;
-    	const textsLen  = texts.length;
-    	console.log({textsLen:textsLen})
+		// Supported use cases – Text search, recommendation, and personalization.
+		console.log("");
+    		console.log("-- Generating Text Embeddings with AWS Bedrock's titan-embed-image-v1  --");
+    		const modelId = "amazon.titan-embed-image-v1";
+		const modelName = "Titan Multimodal Embeddings G1";  
+		const contentType = "application/json";
+    		const client = new BedrockRuntimeClient({credentials});
+    		let embeddings = [];
+    		const texts = textsToEmbed;
+    		const textsLen  = texts.length;
+    		console.log({textsLen:textsLen})
 
   		try 
   		{
@@ -121,16 +121,16 @@ class AIApp
   		    {
   		        let text = texts[index];
   		        const inputs = {
-  				 	modelId: modelId,
-  				  	contentType: contentType,
+  				modelId: modelId,
+  				contentType: contentType,
   			    	body:  JSON.stringify({ "inputText": text, "embeddingConfig": { "outputEmbeddingLength": outputEmbeddingLength } })
-  				};
+  			};
   		        const command = new InvokeModelCommand(inputs);
-  			  	const response = await client.send(command);
-  			  	const responseBody = JSON.parse(new TextDecoder().decode(response.body));
-  			    const embedding = responseBody.embedding;
-  			    const inputTextTokenCount = responseBody.inputTextTokenCount;
-  			    const output = { embeddingSize: embedding.length,  textEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
+  			const response = await client.send(command);
+  			const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+  			const embedding = responseBody.embedding;
+  			const inputTextTokenCount = responseBody.inputTextTokenCount;
+  			const output = { embeddingSize: embedding.length,  textEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
   		        embeddings.push(output);
   		    }
   
@@ -146,20 +146,21 @@ class AIApp
 	{
 	    const aiapp = new AIApp();
 	    const cuwd =  process.cwd();
-
+		
 	    const listAvailableFoundationalModel = false;
 	    const generateImageEmbeddings = true;
 	    const generateTextEmbeddings = false;
+		
 	    const credentialJsonFilePath = `${cuwd}/credentials.json`;
-      const credentials =  JSON.parse(readFileSync(credentialJsonFilePath)).credentials;
+      	    const credentials =  JSON.parse(readFileSync(credentialJsonFilePath)).credentials;
 
-		  // A. define inputs
+	    // A. define inputs
 
 	    // 1 .embed images
 	    const imageFilesToEmbed = [
-		    `${cuwd}/images/nodejs-logo.png`,
-			  `${cuwd}/images/python-logo.png`,
-			  `${cuwd}/images/rust-logo.png`
+		`${cuwd}/images/nodejs-logo.png`,
+		`${cuwd}/images/python-logo.png`,
+		`${cuwd}/images/rust-logo.png`
 	    ];
 	    const imageOutputEmbeddingLength = 256; // 256 || 384 || 1024
 	    // default ouput embedding length  = 1024;
@@ -168,15 +169,15 @@ class AIApp
 	    // 2. embed texts
 	    const textsToEmbed1 = ["The project is going as planned."];
 	    const textsToEmbed = [
-  			"What is your name.",
-  			"I like to walk my dog.",
-  			"I want to visit my mum and dad.",
-  			"What are the different services that you offer.",
-  			"Dr. Roger Butler (1927-2005) is the father of SAGD."
-		  ];
-		  const textOutputEmbeddingLength = 256;
-		  // default ouput embedding length  = 1024;
-		  // can customize to  higher value e.g 256 or 384 but smaller length are less detailed but can improves the response time
+  		"What is your name.",
+  		"I like to walk my dog.",
+  		"I want to visit my mum and dad.",
+  		"What are the different services that you offer.",
+  		"Dr. Roger Butler (1927-2005) is the father of SAGD."
+	    ];
+	    const textOutputEmbeddingLength = 256;
+	    // default ouput embedding length  = 1024;
+	   // can customize to  higher value e.g 256 or 384 but smaller length are less detailed but can improves the response time
 
 	  
 	    // B. test
