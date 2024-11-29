@@ -1,19 +1,18 @@
-# **************************************************************************************************************************************
-# *  embed-free.py                                                                                                                     *
-# **************************************************************************************************************************************
-# *                                                                                                                                    *
-# *  Project: Create Text and Image Embeddings for Database Engines with Python GenAI Free Libraries.                                  *
-# *                                                                                                                                    *
-# *  Copyright © 2024. MongoExpUser.  All Rights Reserved.                                                                             *
-# *                                                                                                                                    *
-# *  License: MIT - https://github.com/MongoExpUser/Popular-Nodejs-Libraries-for-Data-Driven-AI-Applications/blob/main/LICENSE         *
-# *                                                                                                                                    *
-# *                                                                                                                                    *
-# *   This script implements a class for generating text and image embeddings                                                          *
-# *                                                                                                                                    *
-# *   The following 3rd party libraries are used: (1) sentence-transformers (2) imgbeddings and (3) Pillows (PIL)                      *
-# *                                                                                                                                    *
-# **************************************************************************************************************************************
+# ******************************************************************************************************************************************************
+# *  embed-free.py                                                                                                                                     *
+# ******************************************************************************************************************************************************
+# *                                                                                                                                                    *
+# *  Project: Create Text and Image Embeddings for Database Engines with Python GenAI Free Libraries.                                                  *
+# *                                                                                                                                                    *
+# *  Copyright © 2024. MongoExpUser.  All Rights Reserved.                                                                                             *
+# *                                                                                                                                                    *
+# *  License: MIT - https://github.com/MongoExpUser/Popular-Nodejs-Libraries-for-Data-Driven-AI-Applications-and-Sample-Codes/blob/main/LICENSE        *
+# *                                                                                                                                                    *
+# *   This script implements a class for generating text and image embeddings                                                                          *
+# *                                                                                                                                                    *
+# *   The following 3rd party libraries are used: (1) sentence-transformers (2) imgbeddings and (3) Pillows (PIL)                                      *
+# *                                                                                                                                                    *
+# ******************************************************************************************************************************************************
 
 
 
