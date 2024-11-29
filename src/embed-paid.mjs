@@ -1,6 +1,6 @@
 
 /************************************************************************************************************************************************
-*  embed-bedrock-paid.js                                                                                                                        *
+*  embed-bedrock-paid.mjs                                                                                                                        *
 *************************************************************************************************************************************************
 *                                                                                                                                               *
 *  Project: Create Text and Image Embeddings with a NodeJS GenAI Paid Library (AWS Bedrock)                                                     *
@@ -26,15 +26,15 @@ import { BedrockRuntimeClient, InvokeModelCommand } from "@aws-sdk/client-bedroc
 
 class AIApp
 {
-    constructor()
-    {
-    	return null;
-    }
+    	constructor()
+    	{
+    		return null;
+    	}
 
-    async prettyPrint(value)
-	  {
-		  console.log(inspect(value, { showHidden: false, colors: true, depth: Infinity }));
-	  }
+    	async prettyPrint(value)
+	{
+		console.log(inspect(value, { showHidden: false, colors: true, depth: Infinity }));
+	}
 
   	async separator()
   	{
