@@ -289,10 +289,11 @@ class AIApp
 		    ];
 
 		    // 3. & 4. embed image
+		    const cwd = process.cwd();
 		    const imageFilesToEmbed = [
-		    	"nodejs-logo.png",
-		    	"python-logo.png",
-		    	"rust-logo.png"
+		    	`${cuwd}/images/nodejs-logo.png`,
+			`${cuwd}/images/python-logo.png`,
+			`${cuwd}/images/rust-logo.png`
 		    ];
 
 		    // 5. embed text
@@ -311,12 +312,12 @@ class AIApp
 		    // 7. transcribe audio
 		   // local and remote (url) files can be transcribed
 		   const audioFilesToTranscibe = [
-			"oh-yeah-everything-is-fine.wav",
+			`${cuwd}/audios/oh-yeah-everything-is-fine.wav`,
 			"https://www.pacdv.com/sounds/voices/oh-yeah-everything-is-fine.wav",
-			"jfk.wav",
+			`${cuwd}/audios/jfk.wav`,
 			"https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/jfk.wav",
-			"Sports.wav",
-			"https://voiceage.com/wbsamples/in_stereo/Sports.wav"
+			`${cuwd}/audios/Sports.wav`,
+			"https://voiceage.com/wbsamples/in_stereo/Sports.wav`
 		   ];
 
 
