@@ -111,6 +111,7 @@
 - Google Gemini API
   * https://github.com/google-gemini/generative-ai-js/blob/main/README.md (Paid)
 - AWS Bedrock
+  * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-runtime/ (Paid)
   * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock/ (Paid)
 - Meta Node-llama-cpp
   * https://github.com/withcatai/node-llama-cpp/blob/master/README.md (Free)
