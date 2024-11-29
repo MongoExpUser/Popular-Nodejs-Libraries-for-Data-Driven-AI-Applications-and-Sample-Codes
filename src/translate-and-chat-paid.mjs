@@ -1,14 +1,13 @@
-/*********************************************************************************************************************************
-* translate-and-chat-paid.mjs                                                                                                    *
-* 																 *
-* Project:  Translations and Chats with NodeJS Fetch API and Paid GenAI Libraries.                               	         *
-*                                                                                                              			 *
-*  Copyright © 2024. MongoExpUser.  All Rights Reserved.                                                       			 *
-*                                                                                                              			 *
-*  License: MIT - https://github.com/MongoExpUser/Popular-Nodejs-Libraries-for-Data-Driven-AI-Applications/blob/main/LICENSE     *
-*                                                                                                                     		 *
-**********************************************************************************************************************************/
-
+/*************************************************************************************************************************************************
+* translate-and-chat-paid.mjs                                                                                                                    *                            
+*                                                                                                                		                 *
+* Project:  Translations and Chats with NodeJS Fetch API and Paid GenAI Libraries.                                                               *
+*                                                                             							                 *
+*  Copyright © 2024. MongoExpUser.  All Rights Reserved.                                 					                 *
+*                                                                                     						                 *
+*  License: MIT - https://github.com/MongoExpUser/Popular-Nodejs-Libraries-for-Data-Driven-AI-Applications-and-Sample-Codes/blob/main/LICENSE    *
+*                                                                                                            			                 *
+*************************************************************************************************************************************************/
 /*
    Note 1: The use of Fetch API has the  following advantages:
     - You only have to deal with consistent arguments when  passing in arguments. These include:
