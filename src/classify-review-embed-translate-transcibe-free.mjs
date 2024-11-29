@@ -1,13 +1,13 @@
-/********************************************************************************************************************************
-* classify-review-embed-translate-transcribe-free.mjs                                                                           *                            
-*                                                                                                                		*
-* Project:  Classifications, Reviews, Embeddings and Translations  with NodeJS GenAI Free Libraries.                            *
-*                                                                             							*
-*  Copyright © 2024. MongoExpUser.  All Rights Reserved.                                 					*
-*                                                                                     						*
-*  License: MIT - https://github.com/MongoExpUser/Popular-Nodejs-Libraries-for-Data-Driven-AI-Applications/blob/main/LICENSE    *
-*                                                                                                            			*
-********************************************************************************************************************************/
+/*************************************************************************************************************************************************
+* classify-review-embed-translate-transcribe-free.mjs                                                                                            *                            
+*                                                                                                                		                 *
+* Project:  Classifications, Reviews, Embeddings and Translations  with NodeJS GenAI Free Libraries.                                             *
+*                                                                             							                 *
+*  Copyright © 2024. MongoExpUser.  All Rights Reserved.                                 					                 *
+*                                                                                     						                 *
+*  License: MIT - https://github.com/MongoExpUser/Popular-Nodejs-Libraries-for-Data-Driven-AI-Applications-and-Sample-Codes/blob/main/LICENSE    *
+*                                                                                                            			                 *
+*************************************************************************************************************************************************/
 
 
 import { Image } from "image-js";
