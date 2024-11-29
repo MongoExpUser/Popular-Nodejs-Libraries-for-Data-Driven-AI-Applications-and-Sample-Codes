@@ -164,7 +164,7 @@ class AIApp
 	    ];
 	    const imageOutputEmbeddingLength = 256; // 256 || 384 || 1024
 	    // default ouput embedding length  = 1024;
-		  // can customize to  higher value e.g 256 or 384 but smaller length are less detailed but can improves the response time
+	    // can customize to a lower value e.g 256 or 384 but smaller values are less detailed but can improves the response time
 
 	    // 2. embed texts
 	    const textsToEmbed1 = ["The project is going as planned."];
@@ -177,7 +177,7 @@ class AIApp
 	    ];
 	    const textOutputEmbeddingLength = 256;
 	    // default ouput embedding length  = 1024;
-	   // can customize to  higher value e.g 256 or 384 but smaller length are less detailed but can improves the response time
+	    // can customize to a lower  value e.g 256 or 384 but smaller values are less detailed but can improves the response time
 
 	  
 	    // B. test
