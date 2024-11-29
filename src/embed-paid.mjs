@@ -152,7 +152,7 @@ class AIApp
 	    const generateTextEmbeddings = false;
 		
 	    const credentialJsonFilePath = `${cuwd}/credentials.json`;
-      	    const credentials =  JSON.parse(readFileSync(credentialJsonFilePath)).credentials;
+      	    const credentials =  JSON.parse(readFileSync(credentialJsonFilePath)).awsCredentials;
 
 	    // A. define inputs
 
