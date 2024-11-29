@@ -2,6 +2,7 @@
 
 ### Purpose: Data-Driven AI Applications Development, with Examples                                                                                          
 - The links below are provided as <strong>references</strong> and <strong>guides</strong> for designing, implementing and documenting Data-Driven AI Applications with NodeJS.
+- See the repository for examples, under the <strong> src </strong> path.
 ##
  
 ## Data Analytics 
