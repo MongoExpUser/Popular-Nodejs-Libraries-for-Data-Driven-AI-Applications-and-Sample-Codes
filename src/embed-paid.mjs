@@ -1,6 +1,6 @@
 
 /************************************************************************************************************************************************
-*  embed-bedrock-paid.mjs                                                                                                                        *
+*  embed-paid.mjs                                                                                                                               *
 *************************************************************************************************************************************************
 *                                                                                                                                               *
 *  Project: Create Text and Image Embeddings with a NodeJS GenAI Paid Library (AWS Bedrock)                                                     *
@@ -92,13 +92,15 @@ class AIApp
   			const output = { embeddingSize: embedding.length,  imageEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
   		        embeddings.push(output);
   		    } 
+
+		    return embeddings;
   		}
   		catch (error) 
   		{
   			return console.log(`Could not invoke ${modelId}. Error: ${error}`);
   		}
 
-	    return embeddings;
+	    
 	}
 
 	async generateTextEmbeddingsWithBedrock(textsToEmbed, credentials, outputEmbeddingLength)
