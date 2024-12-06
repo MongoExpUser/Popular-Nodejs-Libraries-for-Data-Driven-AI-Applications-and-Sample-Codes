@@ -35,10 +35,9 @@
 - Node-sqlite
   * https://github.com/kriasoft/node-sqlite/blob/master/README.md
   * https://sqlite.org/about.html  (SQLite Org - Main reference)
-- Duckdb-node
-  * https://github.com/duckdb/duckdb-node/blob/main/README.md
-  * https://duckdb.org/docs/api/nodejs/overview.html
-  * https://duckdb.org/ (DuckDB Org - Main reference)
+- DuckDB Node.js API (Neo)
+  * https://duckdb.org/docs/api/node_neo/overview.html
+  * https://duckdb.org/ (DuckDB Org - Main reference) 
 - Node-json-db
   * https://github.com/Belphemur/node-json-db/blob/master/README.md
 - Simple-json-db
