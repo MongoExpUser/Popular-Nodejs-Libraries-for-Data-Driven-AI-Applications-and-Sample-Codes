@@ -14,7 +14,7 @@
   * https://pola-rs.github.io/nodejs-polars/index.html
   * https://docs.pola.rs/ (Docs.Pola.Rs - Main Reference)
 - DuckDB Node.js API (Neo) 
-  * Usage: Analytics Embedded (In-Process) Database
+  * Usage: Analytics and Embedded (In-Process) Database
   * https://duckdb.org/docs/api/node_neo/overview.html
   * https://duckdb.org/ (DuckDB Org - Main reference) 
 - Data-forge
