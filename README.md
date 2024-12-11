@@ -13,6 +13,10 @@
   * https://github.com/pola-rs/nodejs-polars/blob/main/README.md
   * https://pola-rs.github.io/nodejs-polars/index.html
   * https://docs.pola.rs/ (Docs.Pola.Rs - Main Reference)
+- DuckDB Node.js API (Neo) 
+  * Usage: Analytics Embedded (In-Process) Database
+  * https://duckdb.org/docs/api/node_neo/overview.html
+  * https://duckdb.org/ (DuckDB Org - Main reference) 
 - Data-forge
   * https://github.com/data-forge/data-forge-ts/blob/master/README.md
   * https://data-forge.github.io/data-forge-ts/
@@ -35,7 +39,8 @@
 - Node-sqlite
   * https://github.com/kriasoft/node-sqlite/blob/master/README.md
   * https://sqlite.org/about.html  (SQLite Org - Main reference)
-- DuckDB Node.js API (Neo)
+- DuckDB Node.js API (Neo) 
+  * Usage:  Embedded (In-Process) Database and Analytics
   * https://duckdb.org/docs/api/node_neo/overview.html
   * https://duckdb.org/ (DuckDB Org - Main reference) 
 - Node-json-db
