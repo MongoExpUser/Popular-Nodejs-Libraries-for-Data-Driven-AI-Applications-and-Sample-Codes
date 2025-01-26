@@ -70,6 +70,8 @@
   * https://github.com/mongodb/node-mongodb-native/blob/main/README.md
 - Node-postgres
   * https://github.com/brianc/node-postgres/blob/master/README.md
+- Node-libpq
+  * https://github.com/brianc/node-libpq/blob/master/README.md
 - Node-oracledb
   * https://github.com/oracle/node-oracledb/blob/main/README.md
 - Node-mssql
