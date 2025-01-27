@@ -176,6 +176,8 @@
   * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/sns/ (Free Tier and Paid)
 - AWS EventBridge
   * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/eventbridge/ (Free Tier and Paid)
+- AWS Step Functions 
+  * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/sfn/ (Free Tier and Paid)
 - AWS CloudWatch Alarm
   * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/cloudwatch/command/PutMetricAlarmCommand/ (Free Tier and Paid)
 - OCI Streaming
