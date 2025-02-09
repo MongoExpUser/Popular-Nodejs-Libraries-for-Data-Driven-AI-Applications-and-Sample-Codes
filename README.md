@@ -54,6 +54,10 @@
     * Level's improvement, for multiple processess access of database, to avoid locking error.
     * Handles Nodejs Cluster API effectively.
       * See: https://nodejs.org/docs/latest/api/cluster.html#cluster
+- PouchDB
+  * https://pouchdb.com/guides/
+  * https://pouchdb.com/
+  * https://github.com/pouchdb/pouchdb/blob/master/README.md
 ##
 
      
