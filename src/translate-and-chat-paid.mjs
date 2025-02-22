@@ -112,7 +112,7 @@ class AIApp
 			const accountId = "myAccountId";
 			const contentType = "application/json";  
 			const transModel = "@cf/meta/m2m100-1.2b"; 
-			const text =  "What is you name?";
+			const text =  "What is your name?";
 			const sourceLanguage = "english"; 
 			const targetLanguage = "french";
 			const transModelOutput = await aipp.translationModel(text, sourceLanguage, targetLanguage, transModel, contentType, apiTokenOrKey, accountId);
