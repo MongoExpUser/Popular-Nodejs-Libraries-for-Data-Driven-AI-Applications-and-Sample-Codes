@@ -20,7 +20,6 @@
 - Data-forge
   * https://github.com/data-forge/data-forge-ts/blob/master/README.md
   * https://data-forge.github.io/data-forge-ts/
-  * https://www.data-forge-js.com/
 - Stdlib-js
   * https://github.com/stdlib-js/stdlib/blob/develop/README.md
   * https://stdlib.io/docs/api/latest
