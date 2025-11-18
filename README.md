@@ -248,6 +248,7 @@
   * https://github.com/Surnet/swagger-jsdoc/blob/master/README.md
   * https://swagger.io/specification/ (OpenAPI Specification - Main reference)
   * https://editor.swagger.io/ (OpenAPI/Swagger Editor - Quick Start for API design and documentation)
+  * https://editor-next.swagger.io/ (OpenAPI/Swagger Editor - Version 3.1.3+ - Quick Start for API design and documentation)
 ##
     
 
