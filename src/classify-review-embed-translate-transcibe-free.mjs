@@ -21,15 +21,15 @@ import * as encoder from "@tensorflow-models/universal-sentence-encoder";
 
 class AIApp
 {
-	        constructor()
-	        {
-	      	   return null;
-	        }
+	    constructor()
+	    {
+	      	return null;
+	    }
 	
-	        async prettyPrint(value)
-	        {
-		        console.log(inspect(value, { showHidden: false, colors: true, depth: Infinity }));
-	        }
+	    async prettyPrint(value)
+	    {
+		    console.log(inspect(value, { showHidden: false, colors: true, depth: Infinity }));
+	    }
 
 		async separator()
 		{
@@ -182,8 +182,8 @@ class AIApp
 		}
 
 
-	    	async readLocalOrRemoteFile(file)
-	    	{
+	    async readLocalOrRemoteFile(file)
+	    {
 			let buffer;
 			const aiapp = new AIApp();
 	
@@ -378,8 +378,8 @@ class AIApp
 			    { text: " Good evening ladies and gentlemen. We'd like to welcome you to new Daniel Radios broadcast of the" }
 			  ]
 			}
-     		  */
-		}
+     	 */
+	}
 }
 
 
