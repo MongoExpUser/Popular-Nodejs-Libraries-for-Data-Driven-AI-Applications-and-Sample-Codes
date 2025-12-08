@@ -1,12 +1,12 @@
 /*************************************************************************************************************************************************
 * classify-review-embed-translate-transcribe-free.mjs                                                                                            *                            
-*                                                                                                                		                 *
+*                                                                                                                		                         *
 * Project:  Classifications, Reviews, Embeddings and Translations  with NodeJS GenAI Free Libraries.                                             *
-*                                                                             							                 *
-*  Copyright © 2024. MongoExpUser.  All Rights Reserved.                                 					                 *
-*                                                                                     						                 *
+*                                                                             							                                         *
+*  Copyright © 2024. MongoExpUser.  All Rights Reserved.                                 					                                     *
+*                                                                                     						                                     *
 *  License: MIT - https://github.com/MongoExpUser/Popular-Nodejs-Libraries-for-Data-Driven-AI-Applications-and-Sample-Codes/blob/main/LICENSE    *
-*                                                                                                            			                 *
+*                                                                                                            			                         *
 *************************************************************************************************************************************************/
 
 
@@ -28,7 +28,7 @@ class AIApp
 	
 	        async prettyPrint(value)
 	        {
-		   console.log(inspect(value, { showHidden: false, colors: true, depth: Infinity }));
+		        console.log(inspect(value, { showHidden: false, colors: true, depth: Infinity }));
 	        }
 
 		async separator()
@@ -49,7 +49,7 @@ class AIApp
 		    for(let index = 0; index < textLen; index++)
 		    {
 		        const text = texts[index];
-			const cplResult = await cpl(text);
+			    const cplResult = await cpl(text);
 		        classifierResults.push(cplResult);
 		    }
 
@@ -69,7 +69,7 @@ class AIApp
 		    for(let index = 0; index < textLen; index++)
 		    {
 		        const text = texts[index];
-			const rplResult = await rpl(text);
+			    const rplResult = await rpl(text);
 		        reviewerResults.push(rplResult);
 		    }
 
@@ -231,31 +231,31 @@ class AIApp
 		    for(let index = 0; index < fileLen; index++)
 		    {
 		        let file = files[index];
-			const buffer = await aiapp.readLocalOrRemoteFile(file);
-			let wf = new wavefile.WaveFile(buffer);
-			wf.toBitDepth("32f");   // data type -  Float32Array
-			wf.toSampleRate(16000); // sampling rate of 16000
-			let data = wf.getSamples();
+			    const buffer = await aiapp.readLocalOrRemoteFile(file);
+			    let wf = new wavefile.WaveFile(buffer);
+			    wf.toBitDepth("32f");   // data type -  Float32Array
+			    wf.toSampleRate(16000); // sampling rate of 16000
+				let data = wf.getSamples();
 
-			if(Array.isArray(data)) 
-			{
-			    if(data.length > 1) 
-			    {
-				const scaleFactor = Math.sqrt(2);
+			   	if(Array.isArray(data)) 
+			   	{
+					if(data.length > 1) 
+			    	{
+						const scaleFactor = Math.sqrt(2);
 
-				// merge channels to the first channel to save memory
-				const data0Len = data[0].length;
-				for (let i = 0; i < data0Len; ++i) 
-				{
-				    data[0][i] = scaleFactor * (data[0][i] + data[1][i]) / 2;
-				}
-			    }
+						// merge channels to the first channel to save memory
+						const data0Len = data[0].length;
+						for (let i = 0; i < data0Len; ++i) 
+						{
+				    		data[0][i] = scaleFactor * (data[0][i] + data[1][i]) / 2;
+						}
+			    	}
 
-			    // select the first channel and transcribe
-			    let data0 = data[0];
-			    let transplResult = await transpl(data0);
+			    	// select the first channel and transcribe
+			    	let data0 = data[0];
+			    	let transplResult = await transpl(data0);
 		            transcribeResults.push(transplResult);
-			}
+				}
 		    }
 
 		    const stop = new Date();
@@ -312,12 +312,12 @@ class AIApp
 		    // 7. transcribe audio
 		   // local and remote (url) files can be transcribed
 		   const audioFilesToTranscibe = [
-			`${cuwd}/audios/oh-yeah-everything-is-fine.wav`,
-			"https://www.pacdv.com/sounds/voices/oh-yeah-everything-is-fine.wav",
-			`${cuwd}/audios/jfk.wav`,
-			"https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/jfk.wav",
-			`${cuwd}/audios/Sports.wav`,
-			"https://voiceage.com/wbsamples/in_stereo/Sports.wav`
+				`${cuwd}/audios/oh-yeah-everything-is-fine.wav`,
+				"https://www.pacdv.com/sounds/voices/oh-yeah-everything-is-fine.wav",
+				`${cuwd}/audios/jfk.wav`,
+				"https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/jfk.wav",
+				`${cuwd}/audios/Sports.wav`,
+				"https://voiceage.com/wbsamples/in_stereo/Sports.wav`
 		   ];
 
 
