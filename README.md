@@ -117,9 +117,11 @@
   * https://github.com/openai/openai-node/blob/master/README.md (Paid)
 - Cloudflare Workers AI
   * https://developers.cloudflare.com/workers-ai/configuration/bindings/ (Paid)
-- Google Gemini API
-  * https://github.com/google-gemini/generative-ai-js/blob/main/README.md (Paid)
-- AWS Bedrock
+- Google Gen AI
+  * https://github.com/googleapis/js-genai/blob/main/README.md (Paid)
+- Azure AI Foundry
+  * https://github.com/Azure/azure-sdk-for-js#readme (paid)
+- AWS Bedrock 
   * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-runtime/ (Paid)
   * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock/ (Paid)
 - Meta Node-llama-cpp
