@@ -26,12 +26,12 @@ import { BedrockRuntimeClient, InvokeModelCommand } from "@aws-sdk/client-bedroc
 
 class AIApp
 {
-    	constructor()
-    	{
-    		return null;
-    	}
+    constructor()
+    {
+    	return null;
+    }
 
-    	async prettyPrint(value)
+    async prettyPrint(value)
 	{
 		console.log(inspect(value, { showHidden: false, colors: true, depth: Infinity }));
 	}
@@ -62,15 +62,15 @@ class AIApp
 	async generateImageEmbeddingsWithBedrock(imageFilesToEmbed, credentials, outputEmbeddingLength)
 	{
 		// Supported use cases – Image search for all kinds of image identification 
-	    	console.log("");
-    		console.log("-- Generating Image Embeddings with AWS Bedrock's titan-embed-image-v1  --");
-    		const modelId = "amazon.titan-embed-image-v1";
+	    console.log("");
+    	console.log("-- Generating Image Embeddings with AWS Bedrock's titan-embed-image-v1  --");
+    	const modelId = "amazon.titan-embed-image-v1";
 		const modelName = "Titan Multimodal Embeddings G1";  
 		const contentType = "application/json";
-    		const client = new BedrockRuntimeClient({credentials});
-    		let embeddings = [];
-    		const files = imageFilesToEmbed;
-    		const fileLen  = files.length;
+    	const client = new BedrockRuntimeClient({credentials});
+    	let embeddings = [];
+    	const files = imageFilesToEmbed;
+    	const fileLen  = files.length;
 
   		try 
   		{
@@ -82,14 +82,14 @@ class AIApp
   				const inputs = {
   					modelId: modelId,
   				  	contentType: contentType,
-  			    		body:  JSON.stringify({ "inputImage": base64Image, "embeddingConfig": { "outputEmbeddingLength": outputEmbeddingLength } })
+  			    	body:  JSON.stringify({ "inputImage": base64Image, "embeddingConfig": { "outputEmbeddingLength": outputEmbeddingLength } })
   				};
   		        const command = new InvokeModelCommand(inputs);
-  			const response = await client.send(command);
-  			const responseBody = JSON.parse(new TextDecoder().decode(response.body));
-  			const embedding = responseBody.embedding;
-  			const inputTextTokenCount = responseBody.inputTextTokenCount;
-  			const output = { embeddingSize: embedding.length,  imageEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
+  				const response = await client.send(command);
+  				const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+  				const embedding = responseBody.embedding;
+  				const inputTextTokenCount = responseBody.inputTextTokenCount;
+  				const output = { embeddingSize: embedding.length,  imageEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
   		        embeddings.push(output);
   		    } 
 
@@ -99,23 +99,21 @@ class AIApp
   		{
   			return console.log(`Could not invoke ${modelId}. Error: ${error}`);
   		}
-
-	    
 	}
 
 	async generateTextEmbeddingsWithBedrock(textsToEmbed, credentials, outputEmbeddingLength)
 	{
 		// Supported use cases – Text search, recommendation, and personalization.
 		console.log("");
-    		console.log("-- Generating Text Embeddings with AWS Bedrock's titan-embed-image-v1  --");
-    		const modelId = "amazon.titan-embed-image-v1";
+    	console.log("-- Generating Text Embeddings with AWS Bedrock's titan-embed-image-v1  --");
+    	const modelId = "amazon.titan-embed-image-v1";
 		const modelName = "Titan Multimodal Embeddings G1";  
 		const contentType = "application/json";
-    		const client = new BedrockRuntimeClient({credentials});
-    		let embeddings = [];
-    		const texts = textsToEmbed;
-    		const textsLen  = texts.length;
-    		console.log({textsLen:textsLen})
+    	const client = new BedrockRuntimeClient({credentials});
+    	let embeddings = [];
+    	const texts = textsToEmbed;
+    	const textsLen  = texts.length;
+    	console.log({textsLen:textsLen})
 
   		try 
   		{
@@ -123,18 +121,18 @@ class AIApp
   		    {
   		        let text = texts[index];
   		        const inputs = {
-  				modelId: modelId,
-  				contentType: contentType,
+  					modelId: modelId,
+  					contentType: contentType,
   			    	body:  JSON.stringify({ "inputText": text, "embeddingConfig": { "outputEmbeddingLength": outputEmbeddingLength } })
-  			};
-  		        const command = new InvokeModelCommand(inputs);
-  			const response = await client.send(command);
-  			const responseBody = JSON.parse(new TextDecoder().decode(response.body));
-  			const embedding = responseBody.embedding;
-  			const inputTextTokenCount = responseBody.inputTextTokenCount;
-  			const output = { embeddingSize: embedding.length,  textEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
-  		        embeddings.push(output);
-  		    }
+  				};
+  		    	const command = new InvokeModelCommand(inputs);
+  				const response = await client.send(command);
+  				const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+  				const embedding = responseBody.embedding;
+  				const inputTextTokenCount = responseBody.inputTextTokenCount;
+  				const output = { embeddingSize: embedding.length,  textEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
+  		    	embeddings.push(output);
+			}
   
   		    return embeddings;
   		} 
@@ -149,15 +147,15 @@ class AIApp
 	{
 		// Supported use cases – Text search, recommendation, and personalization.
 		console.log("");
-    		console.log("-- Generating Text Embeddings with AWS Bedrock's titan-embed-text-v2:0  --"); 
-    		const modelId = "amazon.titan-embed-text-v2:0"; 
+    	console.log("-- Generating Text Embeddings with AWS Bedrock's titan-embed-text-v2:0  --"); 
+    	const modelId = "amazon.titan-embed-text-v2:0"; 
 		const modelName = "Titan Text Embeddings V2";  
 		const contentType = "application/json";
-    		const client = new BedrockRuntimeClient({credentials});
-    		let embeddings = [];
-    		const texts = textsToEmbed;
-    		const textsLen  = texts.length;
-    		console.log({textsLen:textsLen})
+    	const client = new BedrockRuntimeClient({credentials});
+    	let embeddings = [];
+    	const texts = textsToEmbed;
+    	const textsLen  = texts.length;
+    	console.log({textsLen:textsLen})
 
 		try 
 		{
@@ -165,16 +163,16 @@ class AIApp
 		    {
 		        let text = texts[index];
 		        const inputs = {
-				modelId: modelId,
-				contentType: contentType,
+					modelId: modelId,
+					contentType: contentType,
 			    	body:  JSON.stringify({ "inputText": text, "dimensions": outputEmbeddingLength })
-			};
-		        const command = new InvokeModelCommand(inputs);
-			const response = await client.send(command);
-			const responseBody = JSON.parse(new TextDecoder().decode(response.body));
-			const embedding = responseBody.embedding;
-			const inputTextTokenCount = responseBody.inputTextTokenCount;
-			const output = { embeddingSize: embedding.length, textEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
+				};
+		    	const command = new InvokeModelCommand(inputs);
+				const response = await client.send(command);
+				const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+				const embedding = responseBody.embedding;
+				const inputTextTokenCount = responseBody.inputTextTokenCount;
+				const output = { embeddingSize: embedding.length, textEmbedding: embedding, inputTextTokenCount: inputTextTokenCount, modelName: modelName, modelId: modelId };
 		        embeddings.push(output);
 		    }
 
