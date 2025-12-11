@@ -131,7 +131,6 @@
 - Perplexity AI 
   * https://github.com/perplexityai/perplexity-node#readme (Paid)
   * https://www.npmjs.com/package/@perplexity-ai/perplexity_ai (Paid)
-  * https://docs.perplexity.ai/getting-started/overview (REST API Documentation, with sample code)
 - Meta Node-llama-cpp
   * https://github.com/withcatai/node-llama-cpp/blob/master/README.md (Free)
   * https://node-llama-cpp.withcat.ai/guide/  (Guide)
