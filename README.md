@@ -7,7 +7,7 @@
  
 ## Data Analytics 
 - Apache-arrow 
-  * https://github.com/apache/arrow/blob/main/js/README.md
+  * https://github.com/apache/arrow-js/blob/main/README.md
   * https://arrow.apache.org/docs/js/
 - Nodejs-polars
   * https://github.com/pola-rs/nodejs-polars/blob/main/README.md
