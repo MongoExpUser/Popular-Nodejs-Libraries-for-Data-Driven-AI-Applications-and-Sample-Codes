@@ -125,6 +125,9 @@
 - AWS Bedrock 
   * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-runtime/ (Paid)
   * https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock/ (Paid)
+- Anthropic Claude 
+  * https://github.com/anthropics/anthropic-sdk-typescript/blob/main/README.md (Paid)
+  * https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/README.md (Paid)
 - Meta Node-llama-cpp
   * https://github.com/withcatai/node-llama-cpp/blob/master/README.md (Free)
   * https://node-llama-cpp.withcat.ai/guide/  (Guide)
