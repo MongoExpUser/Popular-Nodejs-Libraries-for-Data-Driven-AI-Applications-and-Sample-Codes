@@ -133,7 +133,7 @@ class AIApp
 			let contentType = "application/json"; 
 			let msgModel = "@cf/meta/llama-3-8b-instruct"  || "@hf/google/gemma-7b-it" || "@cf/google/gemma-7b-it-lora" || "@cf/google/gemma-2b-it-lora";
 			let role = "user"
-			let content = "Implement a JavaScript class for calculation sum of n numbers.";  // example
+			let content = "Implement a JavaScript class for calculating sum of n numbers.";  // example
 			let provider = "cloudflare";
 
 			const msgModelOutputCloudflare = await  aipp.chatModel(content, role, msgModel, provider, contentType, apiTokenOrKey, accountId);
