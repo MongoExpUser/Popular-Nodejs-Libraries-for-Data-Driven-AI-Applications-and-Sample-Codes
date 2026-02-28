@@ -289,7 +289,7 @@ class AIApp
 		    ];
 
 		    // 3. & 4. embed image
-		    const cwd = process.cwd();
+		    const cuwd = process.cwd();
 		    const imageFilesToEmbed = [
 		    	`${cuwd}/images/nodejs-logo.png`,
 			`${cuwd}/images/python-logo.png`,
