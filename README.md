@@ -16,7 +16,7 @@
 - DuckDB Node.js API (Neo) 
   * Usage: Analytics and Embedded (In-Process) Database
   * https://duckdb.org/docs/api/node_neo/overview.html
-  * https://duckdb.org/ (DuckDB Org - Main reference) 
+  * https://duckdb.org/ (DuckDB.Org - Main reference) 
 - Data-forge
   * https://github.com/data-forge/data-forge-ts/blob/master/README.md
   * https://data-forge.github.io/data-forge-ts/
@@ -36,7 +36,7 @@
   * https://nodejs.org/docs/latest/api/sqlite.html#sqlite ( <strong> --experimental-sqlite </strong> )
 - Node-sqlite
   * https://github.com/kriasoft/node-sqlite/blob/master/README.md
-  * https://sqlite.org/about.html  (SQLite Org - Main reference)
+  * https://sqlite.org/about.html  (SQLite.Org - Main reference)
 - DuckDB Node.js API (Neo) 
   * Usage:  Embedded (In-Process) Database and Analytics
   * https://duckdb.org/docs/api/node_neo/overview.html
@@ -93,6 +93,10 @@
   * https://oracle.github.io/nosql-node-sdk/classes/NoSQLClient.html
 - Elasticsearch Node.js Client
   * https://github.com/elastic/elasticsearch-js/blob/main/README.md
+- RQLite (Distributed SQLite) Node.js Client
+  * https://github.com/rqlite/rqlite-js/blob/master/README.md
+  * https://rqlite.io/docs/features/  (RQLite.IO - Main reference)
+  * https://rqlite.io/docs/quick-start/ (RQLite - Quick start)
 ##  
 
 ## Traditional Machine Learning (ML) - Train, Validate and Test
