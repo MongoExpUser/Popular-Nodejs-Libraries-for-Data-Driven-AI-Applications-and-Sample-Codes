@@ -56,7 +56,7 @@
   * https://pouchdb.com/guides/
   * https://pouchdb.com/
   * https://github.com/pouchdb/pouchdb/blob/master/README.md
- - WiseJSONDB
+- WiseJSONDB
   * https://github.com/Xzdes/WiseJSON/blob/master/README.md 
 - DiskDB
   * https://github.com/arvindr21/diskDB/blob/master/README.md
