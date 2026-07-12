@@ -31,7 +31,6 @@
   * https://nicolaspanel.github.io/numjs/NdArray.html
 ##
   
-
 ## Embedded (In-Process) Database
 - Nodejs Inbuilt SQLite Module
   * https://nodejs.org/docs/latest/api/sqlite.html#sqlite ( <strong> --experimental-sqlite </strong> )
@@ -57,9 +56,14 @@
   * https://pouchdb.com/guides/
   * https://pouchdb.com/
   * https://github.com/pouchdb/pouchdb/blob/master/README.md
+ - WiseJSONDB
+  * https://github.com/Xzdes/WiseJSON/blob/master/README.md 
+- DiskDB
+  * https://github.com/arvindr21/diskDB/blob/master/README.md
+- NeDB - @seald-io/nedb
+  * https://github.com/seald/nedb/blob/master/README.md
 ##
 
-     
 ## Client-Server Database Driver
 - Mysql
   * https://github.com/mysqljs/mysql/blob/master/Readme.md
@@ -91,7 +95,6 @@
   * https://github.com/elastic/elasticsearch-js/blob/main/README.md
 ##  
 
-
 ## Traditional Machine Learning (ML) - Train, Validate and Test
 - TensorFlow.js
   * https://github.com/tensorflow/tfjs/blob/master/README.md
@@ -110,7 +113,6 @@
 - Stdlib-js/npl
   * https://github.com/stdlib-js/nlp/blob/main/README.md
 ##
-
 
 ## Generative AI (GenAI) Service - Paid and Free
 - OpenAI Openai-node
@@ -144,7 +146,6 @@
 - TensorFlow.js Mobilenet
   * https://github.com/tensorflow/tfjs-models/blob/master/mobilenet/README.md (Free)
 ##
-
 
 ## Visualization (Web-Based Visualization)
 - D3.js
@@ -213,7 +214,6 @@
   * Examples of Kafta APIs-Compatible Streaming Services: OCI Streaming, AWS Kinesis Data Stream, Apache Pulsar, Redpanda, StreamNative, Azure EventHubs, Upstash Kafka, etc.
 ##
 
-
 ## Web Scrapping
 - Osmosis
   * https://github.com/rchipka/node-osmosis/blob/master/Readme.md
@@ -247,7 +247,6 @@
 - Koa
   * https://github.com/koajs/koa#readme
 ##
-
 
 ## REST API Integration: Design and Documentation
 - JSDoc
