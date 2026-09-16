@@ -123,7 +123,7 @@
   * https://github.com/openai/openai-node/blob/master/README.md (Paid)
 - Cloudflare Workers AI
   * https://developers.cloudflare.com/workers-ai/configuration/bindings/ (Paid)
-- Google Gen AI
+- Google Gen AI /
   * https://github.com/googleapis/js-genai/blob/main/README.md (Paid)
 - Azure AI Foundry
   * https://github.com/Azure/azure-sdk-for-js#readme (paid)
@@ -149,6 +149,10 @@
   * https://github.com/tensorflow/tfjs-models/blob/master/universal-sentence-encoder/README.md (Free)
 - TensorFlow.js Mobilenet
   * https://github.com/tensorflow/tfjs-models/blob/master/mobilenet/README.md (Free)
+- Ollama Platform
+  * https://github.com/ollama/ollama-js/blob/main/README.md (Free * Paid)
+- Hugging Face Platform
+  * https://github.com/huggingface/huggingface.js/blob/main/README.md (Free * Paid)
 ##
 
 ## Visualization (Web-Based Visualization)
