@@ -150,9 +150,9 @@
 - TensorFlow.js Mobilenet
   * https://github.com/tensorflow/tfjs-models/blob/master/mobilenet/README.md (Free)
 - Ollama Platform
-  * https://github.com/ollama/ollama-js/blob/main/README.md (Free * Paid)
+  * https://github.com/ollama/ollama-js/blob/main/README.md (Free & Paid)
 - Hugging Face Platform
-  * https://github.com/huggingface/huggingface.js/blob/main/README.md (Free * Paid)
+  * https://github.com/huggingface/huggingface.js/blob/main/README.md (Free & Paid)
 ##
 
 ## Visualization (Web-Based Visualization)
