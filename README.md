@@ -177,7 +177,7 @@
   * https://www.chartjs.org/docs/latest/
 ##
 
-## Messaging: Stream, Queue, Notification, Event, Task Scheduler, and Orchestrator (Workflow)
+## Stream, Queue, Notification, Event, Task Scheduler and Orchestrator (Workflow)
 - Zeromq.js
   * https://github.com/zeromq/zeromq.js/blob/master/README.md
   * https://zeromq.github.io/zeromq.js/index.html
