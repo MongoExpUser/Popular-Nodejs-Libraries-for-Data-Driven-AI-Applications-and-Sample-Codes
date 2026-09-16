@@ -177,7 +177,7 @@
   * https://www.chartjs.org/docs/latest/
 ##
 
-## Messaging: Stream, Queue, Notification, Event and Task Scheduler
+## Messaging: Stream, Queue, Notification, Event, Task Scheduler, and Orchestrator (Workflow)
 - Zeromq.js
   * https://github.com/zeromq/zeromq.js/blob/master/README.md
   * https://zeromq.github.io/zeromq.js/index.html
@@ -216,10 +216,22 @@
 - OCI Monitoring Alarm
   * https://github.com/oracle/oci-typescript-sdk/blob/master/lib/monitoring/README.md (Free Tier and Paid)
   * https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/api/#/en/monitoring/20180401/Alarm/CreateAlarm (Sample codes)
-- NodeJS Client for Streaming Services (Kafka and Kafta APIs-Compatible Streaming Services):
+- NodeJS Client for Streaming Services (Kafka and Kafta APIs-Compatible Streaming Services)
   * https://github.com/tulios/kafkajs/blob/master/README.md
   * https://kafka.js.org/docs/getting-started (KafjaJS Org)
   * Examples of Kafta APIs-Compatible Streaming Services: OCI Streaming, AWS Kinesis Data Stream, Apache Pulsar, Redpanda, StreamNative, Azure EventHubs, Upstash Kafka, etc.
+- Cloudflare Workflows
+  * https://developers.cloudflare.com/workflows (Free and Paid)
+- Cloudflare Cron Trigger (Event/Task Scheduler)
+  * https://developers.cloudflare.com/workers/configuration/cron-triggers (Free and Paid)
+- Cloudflare Queues
+  * https://developers.cloudflare.com/queues (Free and Paid)
+- Cloudflare R2 Event Notification
+  * https://developers.cloudflare.com/r2/buckets/event-notifications (Free and Paid)
+  * https://developers.cloudflare.com/r2/tutorials/upload-logs-event-notifications
+ 
+
+https://developers.cloudflare.com/queues/get-started/
 ##
 
 ## Web Scrapping
