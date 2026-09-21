@@ -225,14 +225,10 @@
 - Cloudflare Cron Trigger (Event/Task Scheduler)
   * https://developers.cloudflare.com/workers/configuration/cron-triggers (Free and Paid)
 - Cloudflare Queues
-  * https://developers.cloudflare.com/queues (Free and Paid)
+  * https://developers.cloudflare.com/queues/get-started/ (Free and Paid)
 - Cloudflare R2 Event Notification
   * https://developers.cloudflare.com/r2/buckets/event-notifications (Free and Paid)
   * https://developers.cloudflare.com/r2/tutorials/upload-logs-event-notifications
- 
-
-https://developers.cloudflare.com/queues/get-started/
-##
 
 ## Web Scrapping
 - Osmosis
