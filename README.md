@@ -249,7 +249,7 @@
 ## REST API Integration: Implementation
 - Nodejs Inbuilt Http
   * https://nodejs.org/docs/latest/api/http.html#http
-  * https://nodejs.org/en/learn/modules/anatomy-of-an-http-transaction
+  * https://nodejs.org/learn/modules/anatomy-of-an-http-transaction
 - Nodejs Inbuilt Https
   * https://nodejs.org/docs/latest/api/https.html#https
 - Expressjs
