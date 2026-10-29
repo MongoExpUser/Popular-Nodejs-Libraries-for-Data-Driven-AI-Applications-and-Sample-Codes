@@ -118,6 +118,8 @@
   * https://github.com/stdlib-js/nlp/blob/main/README.md
 - Jax-js
   * https://github.com/ekzhang/jax-js/blob/main/README.md
+- Js-pytorch
+  * https://github.com/eduardoleao052/js-pytorch/blob/main/README.md
 ##
 
 ## Generative AI (GenAI) Service - Paid and Free
