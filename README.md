@@ -116,6 +116,8 @@
   * https://github.com/stdlib-js/ml/blob/main/README.md
 - Stdlib-js/npl
   * https://github.com/stdlib-js/nlp/blob/main/README.md
+- Jax-js
+  * https://github.com/ekzhang/jax-js/blob/main/README.md
 ##
 
 ## Generative AI (GenAI) Service - Paid and Free
